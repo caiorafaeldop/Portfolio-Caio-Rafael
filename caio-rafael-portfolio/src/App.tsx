@@ -1,11 +1,10 @@
-import Home from "./pages/home/home"
+import Home from "./pages/home/home";
 const App = () => {
   return (
     <>
-      App
-      <Home/>
+      <Home />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

@@ -12,25 +12,35 @@ const Hero = () => {
     display: "flex",
     alignItems: "center",
   }));
-  const StyledImg = styled("img")(() => ({
-    width: "100%",
+  const StyledImg = styled("img")(({ theme }) => ({
+    width: "80%",
     borderRadius: "50%",
+    border: `3px solid ${theme.palette.primary.dark}`,
   }));
 
   return (
     <>
-      Hero
       <StyledHero>
         <Container maxWidth="lg">
           <Grid container spacing={2}>
-            <Grid item xs={12} md={4}>
+            <Grid item xs={12} md={5}>
               <StyledImg src={Avatar} />
             </Grid>
-            <Grid item xs={12} md={4}>
-              <Typography color="primary" variant="h1" textAlign="center">
+            <Grid item xs={12} md={7}>
+              <Typography
+                color="primary"
+                variant="h1"
+                textAlign="center"
+                pb={2}
+              >
                 Caio Rafael
               </Typography>
-              <Typography color="primary" variant="h2" textAlign="center">
+              <Typography
+                color="primary"
+                variant="h2"
+                textAlign="center"
+                pb={2}
+              >
                 Desenvolvimento Web
               </Typography>
               <Grid
@@ -45,6 +55,7 @@ const Hero = () => {
                   md={6}
                   display="flex"
                   justifyContent="center"
+                  pt={3}
                 >
                   <StyledButton>
                     <EmailIcon />
@@ -57,6 +68,7 @@ const Hero = () => {
                   md={6}
                   display="flex"
                   justifyContent="center"
+                  pt={3}
                 >
                   <StyledButton>
                     <DownloadIcon />

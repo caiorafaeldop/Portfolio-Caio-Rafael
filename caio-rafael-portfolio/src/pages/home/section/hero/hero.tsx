@@ -16,6 +16,7 @@ const Hero = () => {
     width: "80%",
     borderRadius: "50%",
     border: `3px solid ${theme.palette.primary.dark}`,
+    alignItems: "center",
   }));
 
   return (
@@ -23,7 +24,7 @@ const Hero = () => {
       <StyledHero>
         <Container maxWidth="lg">
           <Grid container spacing={2}>
-            <Grid item xs={12} md={5}>
+            <Grid item xs={12} md={4}>
               <StyledImg src={Avatar} />
             </Grid>
             <Grid item xs={12} md={7}>
@@ -41,7 +42,7 @@ const Hero = () => {
                 textAlign="center"
                 pb={2}
               >
-                Desenvolvimento Web
+                Portfolio Web
               </Typography>
               <Grid
                 container

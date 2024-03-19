@@ -1,16 +1,16 @@
-import { styled } from "@mui/material";
+import { styled, Grid, Container, Typography } from "@mui/material";
 import Avatar from "../../../../assets/images/eu.jpg";
-import Grid from "@mui/material/Grid";
-import Container from "@mui/material/Container";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
 import DownloadIcon from "@mui/icons-material/Download";
 import EmailIcon from "@mui/icons-material/Email";
+import theme from "../../../../theme";
+import StyledButton from "../../../../components/StyledButton/StyledButton";
 
 const Hero = () => {
   const StyledHero = styled("div")(() => ({
-    backgroundColor: "#1B2432",
+    backgroundColor: theme.palette.secondary.main,
     height: "100%vh",
+    display: "flex",
+    alignItems: "center",
   }));
   const StyledImg = styled("img")(() => ({
     width: "100%",
@@ -33,7 +33,12 @@ const Hero = () => {
               <Typography color="primary" variant="h2" textAlign="center">
                 Desenvolvimento Web
               </Typography>
-              <Grid container display="flex" justifyContent="center">
+              <Grid
+                container
+                display="flex"
+                justifyContent="center"
+                spacing={3}
+              >
                 <Grid
                   item
                   xs={12}
@@ -41,10 +46,10 @@ const Hero = () => {
                   display="flex"
                   justifyContent="center"
                 >
-                  <Button>
+                  <StyledButton>
                     <EmailIcon />
-                    Contact me
-                  </Button>
+                    <Typography>Contact me</Typography>
+                  </StyledButton>
                 </Grid>
                 <Grid
                   item
@@ -53,10 +58,10 @@ const Hero = () => {
                   display="flex"
                   justifyContent="center"
                 >
-                  <Button>
+                  <StyledButton>
                     <DownloadIcon />
-                    Download CV
-                  </Button>
+                    <Typography>Download CV</Typography>
+                  </StyledButton>
                 </Grid>
               </Grid>
             </Grid>
